@@ -12,6 +12,7 @@
 		234D77DB2BAB5B080063AFD6 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D77DA2BAB5B080063AFD6 /* Item.swift */; };
 		234D77DD2BAB5B090063AFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234D77DC2BAB5B090063AFD6 /* Assets.xcassets */; };
 		234D77E02BAB5B090063AFD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234D77DF2BAB5B090063AFD6 /* Preview Assets.xcassets */; };
+		234E1D722BAF2D9300D40EB6 /* CryptoCoinRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234E1D712BAF2D9300D40EB6 /* CryptoCoinRepository.swift */; };
 		23955C2F2BAC6E9000632ABB /* CryptoCoin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23955C2E2BAC6E9000632ABB /* CryptoCoin.swift */; };
 		23955C312BAC731F00632ABB /* GetGlobalCryptoListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23955C302BAC731F00632ABB /* GetGlobalCryptoListUseCase.swift */; };
 		23955C372BAC96A200632ABB /* CryptoCoinDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23955C362BAC96A200632ABB /* CryptoCoinDomainError.swift */; };
@@ -25,6 +26,7 @@
 		234D77DA2BAB5B080063AFD6 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		234D77DC2BAB5B090063AFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		234D77DF2BAB5B090063AFD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		234E1D712BAF2D9300D40EB6 /* CryptoCoinRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoinRepository.swift; sourceTree = "<group>"; };
 		23955C2E2BAC6E9000632ABB /* CryptoCoin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoin.swift; sourceTree = "<group>"; };
 		23955C302BAC731F00632ABB /* GetGlobalCryptoListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetGlobalCryptoListUseCase.swift; sourceTree = "<group>"; };
 		23955C362BAC96A200632ABB /* CryptoCoinDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoCoinDomainError.swift; sourceTree = "<group>"; };
@@ -61,6 +63,7 @@
 		234D77D52BAB5B080063AFD6 /* CoinGeko */ = {
 			isa = PBXGroup;
 			children = (
+				234E1D6D2BAF2D5600D40EB6 /* Data */,
 				23955C2B2BAC6E4600632ABB /* Domain */,
 				234D77D62BAB5B080063AFD6 /* CoinGekoApp.swift */,
 				234D77D82BAB5B080063AFD6 /* ContentView.swift */,
@@ -77,6 +80,22 @@
 				234D77DF2BAB5B090063AFD6 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		234E1D6D2BAF2D5600D40EB6 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				234E1D6E2BAF2D5F00D40EB6 /* Remote */,
+				234E1D712BAF2D9300D40EB6 /* CryptoCoinRepository.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		234E1D6E2BAF2D5F00D40EB6 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Remote;
 			sourceTree = "<group>";
 		};
 		23955C2B2BAC6E4600632ABB /* Domain */ = {
@@ -187,6 +206,7 @@
 				23955C372BAC96A200632ABB /* CryptoCoinDomainError.swift in Sources */,
 				234D77D92BAB5B080063AFD6 /* ContentView.swift in Sources */,
 				23955C2F2BAC6E9000632ABB /* CryptoCoin.swift in Sources */,
+				234E1D722BAF2D9300D40EB6 /* CryptoCoinRepository.swift in Sources */,
 				234D77DB2BAB5B080063AFD6 /* Item.swift in Sources */,
 				234D77D72BAB5B080063AFD6 /* CoinGekoApp.swift in Sources */,
 				23955C3A2BAC96C700632ABB /* GlobalCryptoListRepositoryType.swift in Sources */,
