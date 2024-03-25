@@ -7,56 +7,59 @@
 
 import Foundation
 
-enum HTTPClientError: Error {
-    case clientError
-    case serverError
-}
-
-protocol RemoteDataSourceType {
-    // https://api.coingecko.com/api/v3/global
-    func getGlobalCryptoSymbolList() async -> Result <[String], HTTPClientError>
-    // https://api.coingecko.com/api/v3/coins/list
-    func getCryptoList() async -> Result <[CryptoCoinBasicDTO], HTTPClientError>
-    // https://api.coingecko.com/api/v3/simple/price?ids=bitcoin%2Cripple&vs_currencies=usd&include_market_cap=true&include_24hr_vol=true&include_24hr_change=true
-    func getPriceInfoForCryptos(for id: [String]) async -> Result <[String: CryptoCoinPriceInfoDTO], HTTPClientError>
-}
-
-struct CryptoCoinBasicDTO: Codable{
-    let id: String
-    let symbol: String
-    let name: String
-    
-    enum CodingKeys: String, CodingKey {
-        case id, symbol, name
-    }
-}
-
-struct CryptoCoinPriceInfoDTO: Codable{
-    let price: Double
-    let marketCap: Double
-    let volume24h: Double
-    let price24h: Double
-
-    enum CodingKeys: String, CodingKey {
-        case price = "usd"
-        case marketCap = "usd_market_cap"
-        case volume24h = "usd_24_vol"
-        case price24h = "usd_24h_change"
+class CryptoCoinErrorToDomainError {
+    func map(error: HTTPClientError?) -> CryptoCoinDomainError {
+        return .generic
     }
 }
 
 class CryptoCoinRepository: GlobalCryptoListRepositoryType {
     
     private let remoteDataSource: RemoteDataSourceType
+    private let errorToDomainMapper: CryptoCoinErrorToDomainError
     
-    init(remoteDataSource: RemoteDataSourceType) {
+    init(remoteDataSource: RemoteDataSourceType, errorToDomainMapper: CryptoCoinErrorToDomainError) {
         self.remoteDataSource = remoteDataSource
+        self.errorToDomainMapper = errorToDomainMapper
     }
     
     func getGlobalCryptoList() async -> Result <[CryptoCoin], CryptoCoinDomainError> {
         
-//        let symbolListResult = await remoteDataSource.getGlobalCryptoSymbolList()
+        let symbolListResult = await remoteDataSource.getGlobalCryptoSymbolList()
         
-        return []
+        switch symbolListResult {
+        case .failure(let error):
+            return .failure(errorToDomainMapper.map(error: error))
+        case .success(let symbolList):
+            return .success(symbolList)
+        }
+        
+//        guard case .success(let symbolList) = symbolListResult else {
+//            guard case .failure(let error) = symbolListResult else {
+//                return .failure(.generic)
+//            }
+//            return .failure(errorToDomainMapper.map(error: error))
+//        }
+        
+        let cryptoListResult = await remoteDataSource.getCryptoList()
+
+        guard case .success(let cryptoList) = cryptoListResult else {
+            guard case .failure(let error) = cryptoListResult else {
+                return .failure(.generic)
+            }
+            return .failure(errorToDomainMapper.map(error: error))
+        }
+
+        let priceInfoResult = await remoteDataSource.getPriceInfoForCryptos(for: <#T##[String]#>)
+        
+        guard case .success(let priceInfo) = priceInfoResult else {
+            guard case .failure(let error) = priceInfoResult else {
+                return .failure(.generic)
+            }
+            return .failure(errorToDomainMapper.map(error: error))
+        }
+        
+        priceInfo
+        
     }
 }
