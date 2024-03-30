@@ -53,45 +53,19 @@ struct CryptoListView: View {
     ]
     
     var body: some View {
-//        Text("Favourites")
+        //        Text("Favourites")
         NavigationStack{
             List {
                 
                 ForEach(cryptos) { crypto in
-                    HStack {
-                        VStack(alignment: .leading) {
-                            AsyncImage(url: URL(string: crypto.image)) { image in
-                                image
-                                    .resizable()
-                                    .scaledToFit()
-                                    .frame(maxWidth: 50)
-                            } placeholder: {
-                                ProgressView()
-                            }
-                            
-                            Text(crypto.name)
-                                .bold()
-                        }
-                        
-                        Spacer()
-                        VStack {
-                            Spacer()
-
-                            Text(String(crypto.price))
-                            Spacer()
-                            Text(String(crypto.price24h ?? 0))
-                                .foregroundStyle(crypto.price24h ?? 0 < 0 ? .red : .green)
-                            Spacer()
-
-                        }
-                    }
+                    CryptoRowView(crypto: crypto)
                     
                 }
             }
             .navigationTitle("Favourites" )
             .navigationBarTitleDisplayMode(.inline)
         }
-
+        
     }
 }
 

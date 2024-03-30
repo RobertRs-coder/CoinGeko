@@ -12,6 +12,7 @@
 		234D77E02BAB5B090063AFD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234D77DF2BAB5B090063AFD6 /* Preview Assets.xcassets */; };
 		23608B6B2BB783B700FF5094 /* CryptoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B6A2BB783B700FF5094 /* CryptoListView.swift */; };
 		23608B6D2BB7850F00FF5094 /* CryptoMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B6C2BB7850F00FF5094 /* CryptoMock.swift */; };
+		23608B6F2BB78FCD00FF5094 /* CryptoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B6E2BB78FCD00FF5094 /* CryptoRowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		234D77DF2BAB5B090063AFD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		23608B6A2BB783B700FF5094 /* CryptoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListView.swift; sourceTree = "<group>"; };
 		23608B6C2BB7850F00FF5094 /* CryptoMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoMock.swift; sourceTree = "<group>"; };
+		23608B6E2BB78FCD00FF5094 /* CryptoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRowView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +84,7 @@
 			children = (
 				23608B6A2BB783B700FF5094 /* CryptoListView.swift */,
 				23608B6C2BB7850F00FF5094 /* CryptoMock.swift */,
+				23608B6E2BB78FCD00FF5094 /* CryptoRowView.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -158,6 +161,7 @@
 			files = (
 				234D77D72BAB5B080063AFD6 /* CoinGekoApp.swift in Sources */,
 				23608B6B2BB783B700FF5094 /* CryptoListView.swift in Sources */,
+				23608B6F2BB78FCD00FF5094 /* CryptoRowView.swift in Sources */,
 				23608B6D2BB7850F00FF5094 /* CryptoMock.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
