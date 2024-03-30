@@ -16,11 +16,11 @@ final class CryptoListViewModel: ObservableObject {
 //    private var error: String
 //    //MARK: -
     init() {
-        self.cryptos = cryptoListMock
+        self.cryptos = mockCryptoList
     }
 //    init(getCryptoListUseCase: GetCryptoListUseCaseType) {
-//        
 //        self.getCryptoListUseCase = getCryptoListUseCase
+    
 //        fectchCoins()
 //    }
 //    

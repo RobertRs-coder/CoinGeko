@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Crypto: Identifiable {
+struct Crypto: Identifiable, Codable {
     let id: String
     let name: String
     let image: String

@@ -26,16 +26,9 @@ struct CryptoRowView: View {
                 Text(crypto.name)
                     .bold()
             }
-            
             Spacer()
             VStack {
                 Text(crypto.price)
-//                if let price24h = crypto.price24h {
-//                    Text(price24h > 0 ? "+\(String(price24h))" : String(price24h))
-//                        .foregroundStyle(crypto.price24h ?? 0 < 0 ? .red : .green)
-//                } else {
-//                    EmptyView()
-//                }
                 Text(Double(crypto.price24h) ?? 0 > 0 ? "+\(crypto.price24h)" : crypto.price24h)
                     .foregroundStyle(Double(crypto.price24h) ?? 0 < 0 ? .red : .green)
                 

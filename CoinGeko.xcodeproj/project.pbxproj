@@ -20,6 +20,7 @@
 		23608B812BB7A7E400FF5094 /* GetCryptoListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B802BB7A7E400FF5094 /* GetCryptoListUseCase.swift */; };
 		23608B852BB7A85500FF5094 /* CryptoPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B842BB7A85500FF5094 /* CryptoPresentable.swift */; };
 		23608B872BB7A88400FF5094 /* CryptoDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B862BB7A88400FF5094 /* CryptoDomainError.swift */; };
+		23608B8A2BB7AC2300FF5094 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B892BB7AC2300FF5094 /* File.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +38,7 @@
 		23608B802BB7A7E400FF5094 /* GetCryptoListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoListUseCase.swift; sourceTree = "<group>"; };
 		23608B842BB7A85500FF5094 /* CryptoPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPresentable.swift; sourceTree = "<group>"; };
 		23608B862BB7A88400FF5094 /* CryptoDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDomainError.swift; sourceTree = "<group>"; };
+		23608B892BB7AC2300FF5094 /* File.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = File.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,9 +187,18 @@
 		23608B832BB7A84700FF5094 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				23608B882BB7ABF900FF5094 /* Mappers */,
 				23608B862BB7A88400FF5094 /* CryptoDomainError.swift */,
 			);
 			path = Common;
+			sourceTree = "<group>";
+		};
+		23608B882BB7ABF900FF5094 /* Mappers */ = {
+			isa = PBXGroup;
+			children = (
+				23608B892BB7AC2300FF5094 /* File.swift */,
+			);
+			path = Mappers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -261,6 +272,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23608B812BB7A7E400FF5094 /* GetCryptoListUseCase.swift in Sources */,
+				23608B8A2BB7AC2300FF5094 /* File.swift in Sources */,
 				23608B752BB7A2E900FF5094 /* CryptoToCryptoPresentableMapper.swift in Sources */,
 				23608B772BB7A50100FF5094 /* CryptoListViewModel.swift in Sources */,
 				23608B7E2BB7A5DD00FF5094 /* DomainErrorToPresentableError.swift in Sources */,
