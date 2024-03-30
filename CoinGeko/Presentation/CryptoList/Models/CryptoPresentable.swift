@@ -13,6 +13,6 @@ struct CryptoPresentable: Identifiable {
     let image: String
     let price: String
     let price24h: String
-    let volume24: String
     let marketCap: String
+    let marketCap24h: String
 }

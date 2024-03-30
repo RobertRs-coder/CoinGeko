@@ -46,8 +46,8 @@ struct CryptoRowView: View {
                 image: "https://assets.coingecko.com/coins/images/1/large/bitcoin.png?1696501400",
                 price: "100000",
                 price24h: "11.55258",
-                volume24: "25629998008",
-                marketCap: "1374791722320"
+                marketCap: "1374791722320",
+                marketCap24h: "25629998008"
             )
     )
 }

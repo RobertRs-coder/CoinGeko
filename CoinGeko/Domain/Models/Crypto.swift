@@ -13,7 +13,7 @@ struct Crypto: Identifiable, Codable {
     let image: String
     let price: Double
     let price24h: Double?
-    let volume24: Double?
-    let marketCap: Double?
+    let marketCap: Int
+    let marketCap24: Double?
     
 }

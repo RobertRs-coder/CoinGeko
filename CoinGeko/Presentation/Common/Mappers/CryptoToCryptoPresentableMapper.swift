@@ -27,10 +27,14 @@ class CryptoToCryptoPresentableMapper: CryptoToCryptoPresentableMapperType {
             id: crypto.id,
             name: crypto.name,
             image: crypto.image,
-            price: "\(crypto.price)",
-            price24h: "\(crypto.price24h ?? 0)",
-            volume24: "\(crypto.volume24 ?? 0)",
-            marketCap: "\(crypto.marketCap ?? 0)"
+            price: String(format: "%.3f", crypto.price),
+            price24h: String(format: "%.3f", crypto.price24h ?? 0),
+            marketCap: String(crypto.marketCap),
+            marketCap24h: String(format: "%.3f", crypto.marketCap24 ?? 0)
         )
     }
 }
+
+
+
+
