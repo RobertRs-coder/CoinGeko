@@ -14,13 +14,20 @@ struct CryptoRowView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                AsyncImage(url: URL(string: crypto.image)) { image in
-                    image
-                        .resizable()
-                        .scaledToFit()
-                        .frame(maxWidth: 50)
-                } placeholder: {
-                    ProgressView()
+                HStack {
+                    AsyncImage(url: URL(string: crypto.image)) { image in
+                        image
+                            .resizable()
+                            .scaledToFit()
+                            .frame(maxWidth: 50)
+                    } placeholder: {
+                        ProgressView()
+                    }
+                    
+                    Image(systemName: "heart.circle")
+                        .foregroundStyle(.black)
+                    Spacer()
+                    
                 }
                 
                 Text(crypto.name)
