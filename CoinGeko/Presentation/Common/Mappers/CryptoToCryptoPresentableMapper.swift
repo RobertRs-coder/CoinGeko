@@ -17,8 +17,7 @@ protocol CryptoToCryptoPresentableMapperType {
 class CryptoToCryptoPresentableMapper: CryptoToCryptoPresentableMapperType {
     func map(_ cryptos: [Crypto]?) -> [CryptoPresentable]{
         guard let cryptos = cryptos else { return [] }
-        return cryptos.compactMap { map($0)
-        }
+        return cryptos.compactMap { map($0) }
     }
     
     func map(_ crypto: Crypto?) -> CryptoPresentable? {

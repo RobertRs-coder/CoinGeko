@@ -15,8 +15,7 @@ protocol CryptoDTOToCryptoMapperType {
 class CryptoDTOToCryptoMapper: CryptoDTOToCryptoMapperType {
     func map(_ cryptos: [CryptoDTO]?) -> [Crypto]{
         guard let cryptos = cryptos else { return [] }
-        return cryptos.compactMap { map($0)
-        }
+        return cryptos.compactMap { map($0) }
     }
     
     func map(_ crypto: CryptoDTO?) -> Crypto? {

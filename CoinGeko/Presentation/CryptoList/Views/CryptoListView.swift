@@ -10,7 +10,7 @@ import SwiftUI
 struct CryptoListView: View {
     @ObservedObject var viewModel: CryptoListViewModel
 
-    init(viewModel: CryptoListViewModel = CryptoListViewModel()) {
+    init(viewModel: CryptoListViewModel) {
         self.viewModel = viewModel
     }
 
@@ -29,6 +29,6 @@ struct CryptoListView: View {
 }
 
 
-#Preview {
-    CryptoListView()
-}
+//#Preview {
+//    CryptoListView(viewModel: CryptoListViewModel()
+//}

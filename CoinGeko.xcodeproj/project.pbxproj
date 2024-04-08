@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		2303773C2BB8877B00E34BC7 /* CryptoDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303773B2BB8877B00E34BC7 /* CryptoDTO.swift */; };
 		2303773F2BB891A200E34BC7 /* CryptoDTOToCryptoMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2303773E2BB891A200E34BC7 /* CryptoDTOToCryptoMapper.swift */; };
+		2321DD642BC3757600278CCD /* GetCryptoListUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321DD632BC3757600278CCD /* GetCryptoListUseCase.swift */; };
+		2321DD672BC3790300278CCD /* CryptoDomainError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321DD662BC3790300278CCD /* CryptoDomainError.swift */; };
+		2321DD692BC3794200278CCD /* GetCryptoListRepositoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2321DD682BC3794200278CCD /* GetCryptoListRepositoryType.swift */; };
 		234D77D72BAB5B080063AFD6 /* CoinGekoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D77D62BAB5B080063AFD6 /* CoinGekoApp.swift */; };
 		234D77DD2BAB5B090063AFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234D77DC2BAB5B090063AFD6 /* Assets.xcassets */; };
 		234D77E02BAB5B090063AFD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234D77DF2BAB5B090063AFD6 /* Preview Assets.xcassets */; };
@@ -24,6 +27,9 @@
 /* Begin PBXFileReference section */
 		2303773B2BB8877B00E34BC7 /* CryptoDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDTO.swift; sourceTree = "<group>"; };
 		2303773E2BB891A200E34BC7 /* CryptoDTOToCryptoMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDTOToCryptoMapper.swift; sourceTree = "<group>"; };
+		2321DD632BC3757600278CCD /* GetCryptoListUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoListUseCase.swift; sourceTree = "<group>"; };
+		2321DD662BC3790300278CCD /* CryptoDomainError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDomainError.swift; sourceTree = "<group>"; };
+		2321DD682BC3794200278CCD /* GetCryptoListRepositoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCryptoListRepositoryType.swift; sourceTree = "<group>"; };
 		234D77D32BAB5B080063AFD6 /* CoinGeko.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoinGeko.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		234D77D62BAB5B080063AFD6 /* CoinGekoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGekoApp.swift; sourceTree = "<group>"; };
 		234D77DC2BAB5B090063AFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -109,6 +115,22 @@
 			children = (
 			);
 			path = Network;
+			sourceTree = "<group>";
+		};
+		2321DD602BC3754400278CCD /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				2321DD682BC3794200278CCD /* GetCryptoListRepositoryType.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		2321DD652BC378F300278CCD /* Errors */ = {
+			isa = PBXGroup;
+			children = (
+				2321DD662BC3790300278CCD /* CryptoDomainError.swift */,
+			);
+			path = Errors;
 			sourceTree = "<group>";
 		};
 		234D77CA2BAB5B080063AFD6 = {
@@ -206,6 +228,7 @@
 		23608B782BB7A51300FF5094 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				2321DD602BC3754400278CCD /* Interfaces */,
 				23608B832BB7A84700FF5094 /* Common */,
 				23608B7F2BB7A7CB00FF5094 /* UseCases */,
 				23608B792BB7A52100FF5094 /* Models */,
@@ -232,6 +255,7 @@
 		23608B7F2BB7A7CB00FF5094 /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
+				2321DD632BC3757600278CCD /* GetCryptoListUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -247,6 +271,7 @@
 		23608B832BB7A84700FF5094 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2321DD652BC378F300278CCD /* Errors */,
 				23608B882BB7ABF900FF5094 /* Mappers */,
 			);
 			path = Common;
@@ -338,6 +363,9 @@
 				2303773F2BB891A200E34BC7 /* CryptoDTOToCryptoMapper.swift in Sources */,
 				2303773C2BB8877B00E34BC7 /* CryptoDTO.swift in Sources */,
 				23608B6F2BB78FCD00FF5094 /* CryptoRowView.swift in Sources */,
+				2321DD672BC3790300278CCD /* CryptoDomainError.swift in Sources */,
+				2321DD692BC3794200278CCD /* GetCryptoListRepositoryType.swift in Sources */,
+				2321DD642BC3757600278CCD /* GetCryptoListUseCase.swift in Sources */,
 				23608B7B2BB7A52E00FF5094 /* Crypto.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
