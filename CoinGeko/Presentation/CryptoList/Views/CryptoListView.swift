@@ -16,19 +16,28 @@ struct CryptoListView: View {
 
     var body: some View {
         NavigationStack{
-            List {
-                ForEach(viewModel.cryptos) { crypto in
-                    CryptoRowView(crypto: crypto)
+            
+            if viewModel.showLoading {
+                ProgressView()
+                    .progressViewStyle(.circular)
+            } else {
+                List {
+                    ForEach(viewModel.cryptos) { crypto in
+                        CryptoRowView(crypto: crypto)
+                    }
                 }
+                .navigationTitle("Cryptos" )
+                .navigationBarTitleDisplayMode(.inline)
             }
-            .navigationTitle("Cryptos" )
-            .navigationBarTitleDisplayMode(.inline)
+        }
+        .onAppear {
+            viewModel.onAppear()
         }
         
     }
 }
 
 
-//#Preview {
-//    CryptoListView(viewModel: CryptoListViewModel()
-//}
+#Preview {
+    CryptoListFactory.create()
+}

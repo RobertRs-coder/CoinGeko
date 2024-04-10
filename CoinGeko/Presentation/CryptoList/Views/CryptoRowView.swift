@@ -8,30 +8,31 @@
 import SwiftUI
 
 struct CryptoRowView: View {
-
+    
     let crypto: CryptoPresentable
-
+    
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                HStack {
-                    AsyncImage(url: URL(string: crypto.image)) { image in
-                        image
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: 50)
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    
-                    Image(systemName: "heart.circle")
-                        .foregroundStyle(.black)
-                    Spacer()
-                    
+                Spacer()
+                AsyncImage(url: URL(string: crypto.image)) { image in
+                    image
+                        .resizable()
+                        .scaledToFit()
+                        .frame(maxWidth: 50)
+                } placeholder: {
+                    ProgressView()
                 }
                 
-                Text(crypto.name)
-                    .bold()
+                
+                HStack {
+                    Text(crypto.name)
+                        .bold()
+                    Image(systemName: "heart.circle")
+                        .foregroundStyle(.black)
+                }
+                
+                
             }
             Spacer()
             VStack {
@@ -45,7 +46,7 @@ struct CryptoRowView: View {
 }
 
 #Preview {
-    CryptoRowView(
+    CryptoRowView(
         crypto:
             CryptoPresentable(
                 id: "ethereum",

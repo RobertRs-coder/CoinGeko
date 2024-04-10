@@ -7,11 +7,7 @@
 
 import Foundation
 
-
-
-
-
-class CryptoRepository: GetCryptoListRepositoryType {
+class CryptoRepository: CryptoRepositoryType {
 
     private let remoteDataSource: RemoteDataSourceType
     private let dataMapper: CryptoDTOToCryptoMapper

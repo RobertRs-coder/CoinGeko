@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol GetCryptoListRepositoryType {
+protocol CryptoRepositoryType {
     func getCryptoList() async -> Result<[Crypto], CryptoDomainError>
 }

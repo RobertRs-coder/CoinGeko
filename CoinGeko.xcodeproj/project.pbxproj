@@ -22,6 +22,7 @@
 		23608B772BB7A50100FF5094 /* CryptoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B762BB7A50100FF5094 /* CryptoListViewModel.swift */; };
 		23608B7B2BB7A52E00FF5094 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B7A2BB7A52E00FF5094 /* Crypto.swift */; };
 		23608B852BB7A85500FF5094 /* CryptoPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B842BB7A85500FF5094 /* CryptoPresentable.swift */; };
+		239F47962BC6F45500751A04 /* CryptoListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F47952BC6F45500751A04 /* CryptoListFactory.swift */; };
 		23CD425D2BC6CA4000B71900 /* HTTPClientErrorToCryptoDomainErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD425C2BC6CA4000B71900 /* HTTPClientErrorToCryptoDomainErrorMapper.swift */; };
 		23CD42602BC6CA6D00B71900 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD425F2BC6CA6D00B71900 /* HTTPClientError.swift */; };
 		23CD42632BC6CD4900B71900 /* RemoteDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD42622BC6CD4900B71900 /* RemoteDataSourceType.swift */; };
@@ -52,6 +53,7 @@
 		23608B762BB7A50100FF5094 /* CryptoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListViewModel.swift; sourceTree = "<group>"; };
 		23608B7A2BB7A52E00FF5094 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		23608B842BB7A85500FF5094 /* CryptoPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPresentable.swift; sourceTree = "<group>"; };
+		239F47952BC6F45500751A04 /* CryptoListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListFactory.swift; sourceTree = "<group>"; };
 		23CD425C2BC6CA4000B71900 /* HTTPClientErrorToCryptoDomainErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientErrorToCryptoDomainErrorMapper.swift; sourceTree = "<group>"; };
 		23CD425F2BC6CA6D00B71900 /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
 		23CD42622BC6CD4900B71900 /* RemoteDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceType.swift; sourceTree = "<group>"; };
@@ -133,6 +135,7 @@
 		230377422BB8982B00E34BC7 /* Composition */ = {
 			isa = PBXGroup;
 			children = (
+				239F47952BC6F45500751A04 /* CryptoListFactory.swift */,
 			);
 			path = Composition;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 				23608B852BB7A85500FF5094 /* CryptoPresentable.swift in Sources */,
 				23608B6B2BB783B700FF5094 /* CryptoListView.swift in Sources */,
 				23CD426B2BC6D8D700B71900 /* HTTPClient.swift in Sources */,
+				239F47962BC6F45500751A04 /* CryptoListFactory.swift in Sources */,
 				2303773F2BB891A200E34BC7 /* CryptoDTOToCryptoMapper.swift in Sources */,
 				2303773C2BB8877B00E34BC7 /* CryptoDTO.swift in Sources */,
 				23CD426F2BC6EA6D00B71900 /* URLSessionErrorResolver.swift in Sources */,

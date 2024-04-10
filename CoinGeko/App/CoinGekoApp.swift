@@ -13,7 +13,7 @@ struct CoinGekoApp: App {
 
     var body: some Scene {
         WindowGroup {
-            CryptoListView()
+            CryptoListFactory.create()
         }
     }
 }

@@ -13,9 +13,9 @@ protocol GetCryptoListUseCaseType {
 
 class GetCryptoListUseCase: GetCryptoListUseCaseType {
 
-    private let repository: GetCryptoListRepositoryType
+    private let repository: CryptoRepositoryType
     
-    init(repository: GetCryptoListRepositoryType) {
+    init(repository: CryptoRepositoryType) {
         self.repository = repository
     }
     

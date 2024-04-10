@@ -17,7 +17,7 @@ class RemoteDataSource: RemoteDataSourceType {
     
     func getCryptoList() async -> Result<[CryptoDTO], HTTPClientError> {
         
-        let queryParams: [String: Any] = [:]
+        let queryParams: [String: Any] = ["vs_currency": "usd"]
         
         let endpoint = Endpoint(
             path: "coins/markets",
@@ -25,7 +25,7 @@ class RemoteDataSource: RemoteDataSourceType {
             method: .get
         )
         
-        let result = httpClient.makeRequest(endpoint: endpoint, baseUrl: "https://api.coingecko.com/api/v3/")
+        let result = await httpClient.makeRequest(endpoint: endpoint, baseUrl: "https://api.coingecko.com/api/v3/")
         
         switch result {
             case .success(let data):
