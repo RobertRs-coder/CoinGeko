@@ -7,12 +7,7 @@
 
 import Foundation
 
-protocol CryptoDTOToCryptoMapperType {
-    func map(_ cryptos: [CryptoDTO]?) -> [Crypto]
-    func map(_ crypto: CryptoDTO?) -> Crypto?
-}
-
-class CryptoDTOToCryptoMapper: CryptoDTOToCryptoMapperType {
+class CryptoDTOToCryptoMapper {
     func map(_ cryptos: [CryptoDTO]?) -> [Crypto]{
         guard let cryptos = cryptos else { return [] }
         return cryptos.compactMap { map($0) }

@@ -25,7 +25,7 @@ final class CryptoListViewModel: ObservableObject {
     func onAppear() {
         //TODO: Get data from usecase
         Task {
-            let result = await getCryptoListUseCase.getCryptoList()
+            let result = await getCryptoListUseCase.execute()
             let cryptos = try? result.get().map { presentableDataMapper.map($0) }
             Task { @MainActor in
                 

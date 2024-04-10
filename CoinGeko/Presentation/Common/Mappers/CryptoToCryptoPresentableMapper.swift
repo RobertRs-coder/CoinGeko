@@ -8,13 +8,7 @@
 import Foundation
 
 //MARK: - Domain Model to Presentable Model
-
-protocol CryptoToCryptoPresentableMapperType {
-    func map(_ cryptos: [Crypto]?) -> [CryptoPresentable]
-    func map(_ crypto: Crypto?) -> CryptoPresentable?
-}
-
-class CryptoToCryptoPresentableMapper: CryptoToCryptoPresentableMapperType {
+class CryptoToCryptoPresentableMapper {
     func map(_ cryptos: [Crypto]?) -> [CryptoPresentable]{
         guard let cryptos = cryptos else { return [] }
         return cryptos.compactMap { map($0) }
