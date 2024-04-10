@@ -14,7 +14,7 @@ struct CryptoRowView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                Spacer()
+                
                 AsyncImage(url: URL(string: crypto.image)) { image in
                     image
                         .resizable()
@@ -46,7 +46,7 @@ struct CryptoRowView: View {
 }
 
 #Preview {
-    CryptoRowView(
+    CryptoRowView( 
         crypto:
             CryptoPresentable(
                 id: "ethereum",
