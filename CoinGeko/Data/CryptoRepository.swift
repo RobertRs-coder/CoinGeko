@@ -9,9 +9,6 @@ import Foundation
 
 
 
-protocol RemoteDataSourceType {
-    func getCryptoList() async -> Result<[CryptoDTO], HTTPClientError>
-}
 
 
 class CryptoRepository: GetCryptoListRepositoryType {
@@ -27,9 +24,7 @@ class CryptoRepository: GetCryptoListRepositoryType {
     }
     
     func getCryptoList() async -> Result<[Crypto], CryptoDomainError> {
-        
-        //https://api.coingecko.com/api/v3/coins/markets
-        
+  
         let result = await remoteDataSource.getCryptoList()
         
         switch result {
