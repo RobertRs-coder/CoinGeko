@@ -8,7 +8,7 @@ To use CoinGeko safely without hardcoding your API key, follow these steps:
 - Create a .plist file: Add a new .plist file to your project called Config.plist.
 - Add your API Key: Inside Config.plist, add a new row with the Key CoinGeko_API_Key and paste your API key in the Value field.
 - Load the API Key: Use the following code to load your API key from the .plist:
-```
+```swift
 import Foundation
 // Define a struct to handle configuration settings.
 struct Config {
@@ -37,7 +37,7 @@ struct Config {
 }
 ```
 - Inside your Request set the header value:
-  ```
+  ```swift
     request.setValue(Config.coinGekoApiKey, forHTTPHeaderField: "x-cg-demo-api-key")
   ```
 ## Use Case
