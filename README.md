@@ -1,6 +1,6 @@
 # CoinGeko
 
-##SetUp
+## SetUp
 
 Secure your API Key using a .plist
 To use CoinGeko safely without hardcoding your API key, follow these steps:
