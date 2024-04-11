@@ -21,13 +21,13 @@ class URLSessionHTTPClient: HTTPClient {
     func makeRequest(endpoint: Endpoint, baseUrl: String) async -> Result<Data, HTTPClientError> {
         
         
-        guard let url = requestMaker.url(endpoint: endpoint, baseUrl: baseUrl) else {
+        guard let urlRequest = requestMaker.url(endpoint: endpoint, baseUrl: baseUrl) else {
             return .failure(.badUrl)
         }
         
         
         do {
-            let (data, response) = try await session.data(from: url)
+            let (data, response) = try await session.data(for: urlRequest)
 
             guard let response = response as? HTTPURLResponse else {
                 return .failure(.responseError)

@@ -34,6 +34,8 @@
 		23CD426F2BC6EA6D00B71900 /* URLSessionErrorResolver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD426E2BC6EA6D00B71900 /* URLSessionErrorResolver.swift */; };
 		23CD42712BC6EAA300B71900 /* URLSessionRequestMaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD42702BC6EAA300B71900 /* URLSessionRequestMaker.swift */; };
 		23E1A1DF2BB9A9800077899D /* mock-crypto-list-market.json in Resources */ = {isa = PBXBuildFile; fileRef = 23E1A1DE2BB9A9800077899D /* mock-crypto-list-market.json */; };
+		23FACCD92BC7C3F40047D3A0 /* Config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23FACCD82BC7C3F40047D3A0 /* Config.plist */; };
+		23FACCDB2BC7C4770047D3A0 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FACCDA2BC7C4770047D3A0 /* Config.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -65,6 +67,8 @@
 		23CD426E2BC6EA6D00B71900 /* URLSessionErrorResolver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionErrorResolver.swift; sourceTree = "<group>"; };
 		23CD42702BC6EAA300B71900 /* URLSessionRequestMaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = URLSessionRequestMaker.swift; sourceTree = "<group>"; };
 		23E1A1DE2BB9A9800077899D /* mock-crypto-list-market.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "mock-crypto-list-market.json"; sourceTree = "<group>"; };
+		23FACCD82BC7C3F40047D3A0 /* Config.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Config.plist; sourceTree = "<group>"; };
+		23FACCDA2BC7C4770047D3A0 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				23E1A1DE2BB9A9800077899D /* mock-crypto-list-market.json */,
+				23FACCDA2BC7C4770047D3A0 /* Config.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -185,6 +190,7 @@
 		234D77D52BAB5B080063AFD6 /* CoinGeko */ = {
 			isa = PBXGroup;
 			children = (
+				23FACCD82BC7C3F40047D3A0 /* Config.plist */,
 				23608B682BB7834500FF5094 /* App */,
 				230377402BB897E800E34BC7 /* Utils */,
 				230377422BB8982B00E34BC7 /* Composition */,
@@ -378,6 +384,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23FACCD92BC7C3F40047D3A0 /* Config.plist in Resources */,
 				234D77E02BAB5B090063AFD6 /* Preview Assets.xcassets in Resources */,
 				23E1A1DF2BB9A9800077899D /* mock-crypto-list-market.json in Resources */,
 				234D77DD2BAB5B090063AFD6 /* Assets.xcassets in Resources */,
@@ -403,6 +410,7 @@
 				2303773C2BB8877B00E34BC7 /* CryptoDTO.swift in Sources */,
 				23CD426F2BC6EA6D00B71900 /* URLSessionErrorResolver.swift in Sources */,
 				23608B6F2BB78FCD00FF5094 /* CryptoRowView.swift in Sources */,
+				23FACCDB2BC7C4770047D3A0 /* Config.swift in Sources */,
 				2321DD672BC3790300278CCD /* CryptoDomainError.swift in Sources */,
 				23CD42652BC6CD7300B71900 /* RemoteDataSource.swift in Sources */,
 				2321DD692BC3794200278CCD /* GetCryptoListRepositoryType.swift in Sources */,
