@@ -16,6 +16,7 @@
 		234D77D72BAB5B080063AFD6 /* CoinGekoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 234D77D62BAB5B080063AFD6 /* CoinGekoApp.swift */; };
 		234D77DD2BAB5B090063AFD6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234D77DC2BAB5B090063AFD6 /* Assets.xcassets */; };
 		234D77E02BAB5B090063AFD6 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 234D77DF2BAB5B090063AFD6 /* Preview Assets.xcassets */; };
+		235CE5302BC7D0780007A901 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 235CE52F2BC7D0780007A901 /* README.md */; };
 		23608B6B2BB783B700FF5094 /* CryptoListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B6A2BB783B700FF5094 /* CryptoListView.swift */; };
 		23608B6F2BB78FCD00FF5094 /* CryptoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B6E2BB78FCD00FF5094 /* CryptoRowView.swift */; };
 		23608B752BB7A2E900FF5094 /* CryptoToCryptoPresentableMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B742BB7A2E900FF5094 /* CryptoToCryptoPresentableMapper.swift */; };
@@ -49,6 +50,7 @@
 		234D77D62BAB5B080063AFD6 /* CoinGekoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinGekoApp.swift; sourceTree = "<group>"; };
 		234D77DC2BAB5B090063AFD6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		234D77DF2BAB5B090063AFD6 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		235CE52F2BC7D0780007A901 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		23608B6A2BB783B700FF5094 /* CryptoListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListView.swift; sourceTree = "<group>"; };
 		23608B6E2BB78FCD00FF5094 /* CryptoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRowView.swift; sourceTree = "<group>"; };
 		23608B742BB7A2E900FF5094 /* CryptoToCryptoPresentableMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoToCryptoPresentableMapper.swift; sourceTree = "<group>"; };
@@ -175,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				234D77D52BAB5B080063AFD6 /* CoinGeko */,
+				235CE52F2BC7D0780007A901 /* README.md */,
 				234D77D42BAB5B080063AFD6 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -386,6 +389,7 @@
 			files = (
 				23FACCD92BC7C3F40047D3A0 /* Config.plist in Resources */,
 				234D77E02BAB5B090063AFD6 /* Preview Assets.xcassets in Resources */,
+				235CE5302BC7D0780007A901 /* README.md in Resources */,
 				23E1A1DF2BB9A9800077899D /* mock-crypto-list-market.json in Resources */,
 				234D77DD2BAB5B090063AFD6 /* Assets.xcassets in Resources */,
 			);

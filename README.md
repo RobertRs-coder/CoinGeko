@@ -40,9 +40,22 @@ struct Config {
   ```swift
     request.setValue(Config.coinGekoApiKey, forHTTPHeaderField: "x-cg-demo-api-key")
   ```
-## Use Case
+## Use Cases
 
 ### Get Crypto List with Market Cap
+
+#### User history
+
+As a user, I want to be able to consult the cryptos ordered by market capitalization
+
+#### BDD
+GIVEN I have the app started
+WHEN I access the global view
+THEN I see a list of crypto currencies
+AND basic information of each crypto (name, image, price, price24) and ordered from highest to lowest by market cap
+
+#### Entities
+- ⁠Crypto: Id, Name, Image, Price, Price24h, MarketCap, MarketCap24
 
 #### Dependency Diagram
 
