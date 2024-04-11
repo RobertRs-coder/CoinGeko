@@ -6,7 +6,7 @@ Secure your API Key using a .plist
 To use CoinGeko safely without hardcoding your API key, follow these steps:
 
 - Create a .plist file: Add a new .plist file to your project called Config.plist.
-- Add your API Key: Inside Config.plist, add a new row with the Key CoinGeko_API_Key and paste your API key in the Value field.
+- Add your API Key: Inside Config.plist, add a new row with the key "CoinGeko_API_Key" and paste your API key in the Value field.
 - Load the API Key: Use the following code to load your API key from the .plist:
 ```swift
 import Foundation
