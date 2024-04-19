@@ -14,11 +14,12 @@ class CryptoListFactory {
         CryptoListView(viewModel: createViewModel())
         
     }
-    
+    //MARK: Factories
     private static func createViewModel() -> CryptoListViewModel {
         return CryptoListViewModel(
             getCryptoListUseCase: createUseCase(),
-            presentableDataMapper: CryptoToCryptoPresentableMapper()
+            dataMapper: CryptoToCryptoPresentableMapper(),
+           errorMapper: CryptoDomainErrorToPresentableErrorMapper()
         )
     }
     
@@ -34,11 +35,11 @@ class CryptoListFactory {
         )
     }
     
-    private static func createDataSource() -> RemoteDataSourceType {
+    private static func createDataSource() -> RemoteCryptoDataSourceType {
         let httpClient = URLSessionHTTPClient(
             requestMaker: URLSessionRequestMaker(),
             errorResolver: URLSessionErrorResolver()
         )
-        return RemoteDataSource(httpClient: httpClient)
+        return RemoteCryptoDataSource(httpClient: httpClient)
     }
 }

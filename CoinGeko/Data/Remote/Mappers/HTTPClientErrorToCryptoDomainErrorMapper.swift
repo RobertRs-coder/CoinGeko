@@ -10,7 +10,9 @@ import Foundation
 
 class HTTPClientErrorToCryptoDomainErrorMapper {
     func map(_ error: HTTPClientError?) -> CryptoDomainError{
-//        guard let error = error else { return nil }
-        return .generic
+        guard error == .tooManyRequests else {
+            return .generic
+        }
+        return .tooManyRequests
     }
 }

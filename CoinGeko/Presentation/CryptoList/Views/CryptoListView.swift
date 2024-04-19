@@ -21,17 +21,26 @@ struct CryptoListView: View {
                 ProgressView()
                     .progressViewStyle(.circular)
             } else {
-                List {
-                    ForEach(viewModel.cryptos) { crypto in
-                        CryptoRowView(crypto: crypto)
+                if viewModel.errorMessage == nil {
+                    List {
+                        ForEach(viewModel.cryptos) { crypto in
+                            CryptoRowView(crypto: crypto)
+                        }
                     }
+                    .navigationTitle("Cryptos" )
+                    .navigationBarTitleDisplayMode(.inline)
+                } else {
+                    Text(viewModel.errorMessage ?? "")
                 }
-                .navigationTitle("Cryptos" )
-                .navigationBarTitleDisplayMode(.inline)
+            
             }
         }
         .onAppear {
             viewModel.onAppear()
+        }
+        .refreshable {
+            viewModel.onAppear()
+
         }
         
     }

@@ -14,7 +14,7 @@ struct CryptoRowView: View {
     var body: some View {
         HStack {
             VStack(alignment: .leading) {
-                
+                HStack {
                 AsyncImage(url: URL(string: crypto.image)) { image in
                     image
                         .resizable()
@@ -23,14 +23,14 @@ struct CryptoRowView: View {
                 } placeholder: {
                     ProgressView()
                 }
+                Image(systemName: "heart.circle")
+                    .foregroundStyle(.black)
                 
-                
-                HStack {
+            }
+             
                     Text(crypto.name)
                         .bold()
-                    Image(systemName: "heart.circle")
-                        .foregroundStyle(.black)
-                }
+
                 
                 
             }

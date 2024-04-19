@@ -9,4 +9,5 @@ import Foundation
 
 enum CryptoDomainError: Error {
     case generic
+    case tooManyRequests
 }

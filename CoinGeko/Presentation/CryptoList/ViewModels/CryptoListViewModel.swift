@@ -7,37 +7,46 @@
 
 import Foundation
 
-
-
 final class CryptoListViewModel: ObservableObject {
     @Published var cryptos = [CryptoPresentable]()
+    @Published var errorMessage: String?
     @Published var showLoading = false
     private let getCryptoListUseCase: GetCryptoListUseCaseType
-    private let presentableDataMapper: CryptoToCryptoPresentableMapper
+    private let dataMapper: CryptoToCryptoPresentableMapper
+    private let errorMapper: CryptoDomainErrorToPresentableErrorMapper
     
-    init(getCryptoListUseCase: GetCryptoListUseCaseType, presentableDataMapper: CryptoToCryptoPresentableMapper) {
+    init(getCryptoListUseCase: GetCryptoListUseCaseType, dataMapper: CryptoToCryptoPresentableMapper,  errorMapper: CryptoDomainErrorToPresentableErrorMapper) {
         self.getCryptoListUseCase = getCryptoListUseCase
-        self.presentableDataMapper = presentableDataMapper
-        
-        onAppear()
-
+        self.dataMapper = dataMapper
+        self.errorMapper = errorMapper
     }
 
     func onAppear() {
-        //TODO: Get data from usecase
         showLoading = true
         Task {
             let result = await getCryptoListUseCase.execute()
-            let cryptos = try? result.get().map { presentableDataMapper.map($0) }
-            Task { @MainActor in
+            
+            switch result {
+                case .success(let cryptos):
                 
-                showLoading = false
-                guard let cryptos = cryptos else { return }
-                
-                //FIXME: NO entiendo porque me devuelve [CryptoPresentable?] si el mapper ya tiene un compactMap para eliminar los opcionales
-                self.cryptos = cryptos.compactMap { $0 }
+                    Task { @MainActor in
+                        showLoading = false
+
+                        self.cryptos = dataMapper.map(cryptos)
+                    }
+
+                case .failure(let error):
+                    
+                    Task { @MainActor in
+                        showLoading = false
+                        self.errorMessage = errorMapper.map(error: error)
+                    }
             }
         }
     }
+    
+//    func handleError(error: CryptoDomainError?) {
+//        errorMapper.map(error: error)
+//    }
 }
 

@@ -1,5 +1,5 @@
 //
-//  RemoteDataSource.swift
+//  RemoteCryptoDataSource.swift
 //  CoinGeko
 //
 //  Created by Roberto Rojo Sahuquillo on 10/4/24.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-class RemoteDataSource: RemoteDataSourceType {
+class RemoteCryptoDataSource: RemoteCryptoDataSourceType {
     
     private let httpClient: HTTPClient
     

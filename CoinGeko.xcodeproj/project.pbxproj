@@ -24,10 +24,11 @@
 		23608B7B2BB7A52E00FF5094 /* Crypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B7A2BB7A52E00FF5094 /* Crypto.swift */; };
 		23608B852BB7A85500FF5094 /* CryptoPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23608B842BB7A85500FF5094 /* CryptoPresentable.swift */; };
 		239F47962BC6F45500751A04 /* CryptoListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239F47952BC6F45500751A04 /* CryptoListFactory.swift */; };
+		23C1DEA42BD165EE007899E1 /* CryptoDomainErrorToPresentableErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23C1DEA32BD165EE007899E1 /* CryptoDomainErrorToPresentableErrorMapper.swift */; };
 		23CD425D2BC6CA4000B71900 /* HTTPClientErrorToCryptoDomainErrorMapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD425C2BC6CA4000B71900 /* HTTPClientErrorToCryptoDomainErrorMapper.swift */; };
 		23CD42602BC6CA6D00B71900 /* HTTPClientError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD425F2BC6CA6D00B71900 /* HTTPClientError.swift */; };
-		23CD42632BC6CD4900B71900 /* RemoteDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD42622BC6CD4900B71900 /* RemoteDataSourceType.swift */; };
-		23CD42652BC6CD7300B71900 /* RemoteDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD42642BC6CD7300B71900 /* RemoteDataSource.swift */; };
+		23CD42632BC6CD4900B71900 /* RemoteCryptoDataSourceType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD42622BC6CD4900B71900 /* RemoteCryptoDataSourceType.swift */; };
+		23CD42652BC6CD7300B71900 /* RemoteCryptoDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD42642BC6CD7300B71900 /* RemoteCryptoDataSource.swift */; };
 		23CD42672BC6D87E00B71900 /* HTTPMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD42662BC6D87E00B71900 /* HTTPMethod.swift */; };
 		23CD42692BC6D89D00B71900 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD42682BC6D89D00B71900 /* Endpoint.swift */; };
 		23CD426B2BC6D8D700B71900 /* HTTPClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23CD426A2BC6D8D700B71900 /* HTTPClient.swift */; };
@@ -58,10 +59,11 @@
 		23608B7A2BB7A52E00FF5094 /* Crypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Crypto.swift; sourceTree = "<group>"; };
 		23608B842BB7A85500FF5094 /* CryptoPresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPresentable.swift; sourceTree = "<group>"; };
 		239F47952BC6F45500751A04 /* CryptoListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoListFactory.swift; sourceTree = "<group>"; };
+		23C1DEA32BD165EE007899E1 /* CryptoDomainErrorToPresentableErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoDomainErrorToPresentableErrorMapper.swift; sourceTree = "<group>"; };
 		23CD425C2BC6CA4000B71900 /* HTTPClientErrorToCryptoDomainErrorMapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientErrorToCryptoDomainErrorMapper.swift; sourceTree = "<group>"; };
 		23CD425F2BC6CA6D00B71900 /* HTTPClientError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClientError.swift; sourceTree = "<group>"; };
-		23CD42622BC6CD4900B71900 /* RemoteDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSourceType.swift; sourceTree = "<group>"; };
-		23CD42642BC6CD7300B71900 /* RemoteDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteDataSource.swift; sourceTree = "<group>"; };
+		23CD42622BC6CD4900B71900 /* RemoteCryptoDataSourceType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCryptoDataSourceType.swift; sourceTree = "<group>"; };
+		23CD42642BC6CD7300B71900 /* RemoteCryptoDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteCryptoDataSource.swift; sourceTree = "<group>"; };
 		23CD42662BC6D87E00B71900 /* HTTPMethod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethod.swift; sourceTree = "<group>"; };
 		23CD42682BC6D89D00B71900 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		23CD426A2BC6D8D700B71900 /* HTTPClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPClient.swift; sourceTree = "<group>"; };
@@ -99,8 +101,8 @@
 				23CD425E2BC6CA5E00B71900 /* Common */,
 				2303773D2BB8919700E34BC7 /* Mappers */,
 				2303773A2BB8876A00E34BC7 /* DTOs */,
-				23CD42622BC6CD4900B71900 /* RemoteDataSourceType.swift */,
-				23CD42642BC6CD7300B71900 /* RemoteDataSource.swift */,
+				23CD42622BC6CD4900B71900 /* RemoteCryptoDataSourceType.swift */,
+				23CD42642BC6CD7300B71900 /* RemoteCryptoDataSource.swift */,
 			);
 			path = Remote;
 			sourceTree = "<group>";
@@ -131,12 +133,12 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		230377412BB897F100E34BC7 /* Architecture */ = {
+		230377412BB897F100E34BC7 /* Infrastructure */ = {
 			isa = PBXGroup;
 			children = (
 				230377432BB8984000E34BC7 /* Network */,
 			);
-			path = Architecture;
+			path = Infrastructure;
 			sourceTree = "<group>";
 		};
 		230377422BB8982B00E34BC7 /* Composition */ = {
@@ -197,7 +199,7 @@
 				23608B682BB7834500FF5094 /* App */,
 				230377402BB897E800E34BC7 /* Utils */,
 				230377422BB8982B00E34BC7 /* Composition */,
-				230377412BB897F100E34BC7 /* Architecture */,
+				230377412BB897F100E34BC7 /* Infrastructure */,
 				230377382BB8875800E34BC7 /* Data */,
 				23608B782BB7A51300FF5094 /* Domain */,
 				23608B692BB783A000FF5094 /* Presentation */,
@@ -325,6 +327,7 @@
 			isa = PBXGroup;
 			children = (
 				23608B742BB7A2E900FF5094 /* CryptoToCryptoPresentableMapper.swift */,
+				23C1DEA32BD165EE007899E1 /* CryptoDomainErrorToPresentableErrorMapper.swift */,
 			);
 			path = Mappers;
 			sourceTree = "<group>";
@@ -416,7 +419,7 @@
 				23608B6F2BB78FCD00FF5094 /* CryptoRowView.swift in Sources */,
 				23FACCDB2BC7C4770047D3A0 /* Config.swift in Sources */,
 				2321DD672BC3790300278CCD /* CryptoDomainError.swift in Sources */,
-				23CD42652BC6CD7300B71900 /* RemoteDataSource.swift in Sources */,
+				23CD42652BC6CD7300B71900 /* RemoteCryptoDataSource.swift in Sources */,
 				2321DD692BC3794200278CCD /* GetCryptoListRepositoryType.swift in Sources */,
 				23CD42692BC6D89D00B71900 /* Endpoint.swift in Sources */,
 				23CD426D2BC6D90400B71900 /* URLSessionHTTPClient.swift in Sources */,
@@ -425,7 +428,8 @@
 				23CD42602BC6CA6D00B71900 /* HTTPClientError.swift in Sources */,
 				23CD42672BC6D87E00B71900 /* HTTPMethod.swift in Sources */,
 				23608B7B2BB7A52E00FF5094 /* Crypto.swift in Sources */,
-				23CD42632BC6CD4900B71900 /* RemoteDataSourceType.swift in Sources */,
+				23C1DEA42BD165EE007899E1 /* CryptoDomainErrorToPresentableErrorMapper.swift in Sources */,
+				23CD42632BC6CD4900B71900 /* RemoteCryptoDataSourceType.swift in Sources */,
 				23CD425D2BC6CA4000B71900 /* HTTPClientErrorToCryptoDomainErrorMapper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -7,6 +7,6 @@
 
 import Foundation
 
-protocol RemoteDataSourceType {
+protocol RemoteCryptoDataSourceType {
     func getCryptoList() async -> Result<[CryptoDTO], HTTPClientError>
 }

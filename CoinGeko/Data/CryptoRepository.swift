@@ -9,11 +9,11 @@ import Foundation
 
 class CryptoRepository: CryptoRepositoryType {
 
-    private let remoteDataSource: RemoteDataSourceType
+    private let remoteDataSource: RemoteCryptoDataSourceType
     private let dataMapper: CryptoDTOToCryptoMapper
     private let errorMapper: HTTPClientErrorToCryptoDomainErrorMapper
     
-    init(remoteDataSource: RemoteDataSourceType, dataMapper: CryptoDTOToCryptoMapper, errorMapper: HTTPClientErrorToCryptoDomainErrorMapper) {
+    init(remoteDataSource: RemoteCryptoDataSourceType, dataMapper: CryptoDTOToCryptoMapper, errorMapper: HTTPClientErrorToCryptoDomainErrorMapper) {
         self.remoteDataSource = remoteDataSource
         self.dataMapper = dataMapper
         self.errorMapper = errorMapper
