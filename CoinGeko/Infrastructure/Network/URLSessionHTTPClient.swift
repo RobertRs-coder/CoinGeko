@@ -19,12 +19,10 @@ class URLSessionHTTPClient: HTTPClient {
     }
     
     func makeRequest(endpoint: Endpoint, baseUrl: String) async -> Result<Data, HTTPClientError> {
-        
-        
+          
         guard let urlRequest = requestMaker.url(endpoint: endpoint, baseUrl: baseUrl) else {
             return .failure(.badUrl)
         }
-        
         
         do {
             let (data, response) = try await session.data(for: urlRequest)
@@ -39,7 +37,7 @@ class URLSessionHTTPClient: HTTPClient {
             
             return .success(data)
             
-        }catch {
+        } catch {
             return .failure(errorResolver.resolve(error: error))
         }
     }

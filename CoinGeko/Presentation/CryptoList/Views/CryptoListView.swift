@@ -40,9 +40,7 @@ struct CryptoListView: View {
         }
         .refreshable {
             viewModel.onAppear()
-
-        }
-        
+        }  
     }
 }
 

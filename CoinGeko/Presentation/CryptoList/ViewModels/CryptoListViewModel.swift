@@ -22,7 +22,7 @@ final class CryptoListViewModel: ObservableObject {
     }
 
     func onAppear() {
-        showLoading = true
+        showLoading.toggle()
         Task {
             let result = await getCryptoListUseCase.execute()
             
@@ -30,7 +30,7 @@ final class CryptoListViewModel: ObservableObject {
                 case .success(let cryptos):
                 
                     Task { @MainActor in
-                        showLoading = false
+                        showLoading.toggle()
 
                         self.cryptos = dataMapper.map(cryptos)
                     }
@@ -38,7 +38,8 @@ final class CryptoListViewModel: ObservableObject {
                 case .failure(let error):
                     
                     Task { @MainActor in
-                        showLoading = false
+                        showLoading.toggle()
+
                         self.errorMessage = errorMapper.map(error: error)
                     }
             }
